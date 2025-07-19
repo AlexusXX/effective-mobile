@@ -1,0 +1,2 @@
+data/Input40x32.bmp
+data/Output40x32.bmp
