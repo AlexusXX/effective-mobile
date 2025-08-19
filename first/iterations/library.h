@@ -15,12 +15,5 @@ namespace my::perfect::library
 		std::vector< std::string > books;
 	};
 
-	constexpr decltype(BookShelf::books)::const_iterator begin(const BookShelf &shelf) noexcept {
-		return shelf.books.begin();
-	}
-
-	constexpr decltype(BookShelf::books)::const_iterator end(const BookShelf &shelf) noexcept {
-		return shelf.books.end();
-	}
 } // namespace my::perfect::library
 #endif //EFFECTIVE_MOBILE_LIBRARY_H

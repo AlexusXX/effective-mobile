@@ -5,6 +5,16 @@
 #include "library.h"
 
 #include <iostream>
+namespace my::perfect::library {
+
+	constexpr decltype(BookShelf::books)::const_iterator begin(const BookShelf &shelf) noexcept {
+		return shelf.books.begin();
+	}
+
+	constexpr decltype(BookShelf::books)::const_iterator end(const BookShelf &shelf) noexcept {
+		return shelf.books.end();
+	}
+}
 
 void print( const my::perfect::library::BookShelf & books )
 {

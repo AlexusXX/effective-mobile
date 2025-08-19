@@ -43,8 +43,10 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[]) {
 	});
 	print(persons);
 
-	std::cout<<"\nСорт по фамилии:\n";
-	std::ranges::sort(persons, std::ranges::greater{}, &Person::last_name);
+	std::cout<<"\nСорт по фамилии и имени:\n";
+	std::ranges::sort(persons, [](const Person & a, const Person & b) {
+		return a.last_name > b.last_name || (a.last_name == b.last_name && a.first_name > b.first_name);
+	});
 	print(persons);
 
 	std::cout<<"\nСорт по id (сначала мужчины):\n";
