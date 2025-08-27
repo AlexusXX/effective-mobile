@@ -12,7 +12,6 @@ add_executable(first_sorting
 find_package(benchmark REQUIRED)
 add_executable(first_average
         average/main.cpp
-        command-processor/main.cpp
 )
 target_link_libraries(first_average benchmark::benchmark)
 add_executable(first_copying
