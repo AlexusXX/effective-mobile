@@ -8,3 +8,5 @@ add_executable(test_task
         test/Bitmap.cpp
         test/Bitmap.h
 )
+
+add_subdirectory(second)
